@@ -4,51 +4,66 @@ import path from 'path';
 
 export async function GET() {
     try {
-        const workDir = path.join(process.cwd(), 'public', 'My Work');
-
-        // Define standard categories to map folders to
-        const categoryMap: Record<string, string> = {
-            'Brand Ads': 'Advertising',
-            'Brand Collateral': 'Marketing Materials',
-            'On Ground Events': 'Event Production',
-            'PR Activity': 'Public Relations',
-        };
-
-        const folders = fs.readdirSync(workDir, { withFileTypes: true })
-            .filter(dirent => dirent.isDirectory() && !dirent.name.startsWith('.'))
-            .map(dirent => {
-                const folderPath = path.join(workDir, dirent.name);
-                const files = fs.readdirSync(folderPath)
-                    .filter(file => !file.startsWith('.'))
-                    .map(file => {
-                        const ext = file.toLowerCase().split('.').pop() || '';
-                        let type = 'other';
-                        if (['png', 'jpg', 'jpeg', 'gif', 'svg', 'webp'].includes(ext)) {
-                            type = 'image';
-                        } else if (['pdf'].includes(ext)) {
-                            type = 'pdf';
-                        } else if (['doc', 'docx'].includes(ext)) {
-                            type = 'doc';
-                        }
-                        return {
-                            name: file,
-                            path: `/My Work/${dirent.name}/${file}`,
-                            type
-                        };
-                    });
-
-                // Auto-select a thumbnail (prefer images over pdfs if available)
-                const imageFile = files.find(f => f.type === 'image');
-                const thumbnail = imageFile ? imageFile.path : '';
-
-                return {
-                    id: dirent.name.toLowerCase().replace(/\s+/g, '-'),
-                    title: dirent.name,
-                    category: categoryMap[dirent.name] || 'Project',
-                    thumbnail,
-                    files
-                };
-            });
+        // Standard predefined categories instead of reading from disk
+        const folders = [
+            {
+                id: 'brand-ads',
+                title: 'Brand Ads',
+                category: 'Advertising',
+                thumbnail: '', // You can paste a public image URL here for the thumbnail
+                files: [
+                    {
+                        name: 'Brand Ad Link 1',
+                        path: 'https://drive.google.com/drive/folders/YOUR_LINK_HERE',
+                        type: 'gdrive'
+                    },
+                    {
+                        name: 'Brand Ad Link 2',
+                        path: 'https://drive.google.com/drive/folders/YOUR_LINK_HERE',
+                        type: 'gdrive'
+                    }
+                ]
+            },
+            {
+                id: 'brand-collateral',
+                title: 'Brand Collateral',
+                category: 'Marketing Materials',
+                thumbnail: '',
+                files: [
+                    {
+                        name: 'Brand Collateral Folder',
+                        path: 'https://drive.google.com/drive/folders/YOUR_LINK_HERE',
+                        type: 'gdrive'
+                    }
+                ]
+            },
+            {
+                id: 'on-ground-events',
+                title: 'On Ground Events',
+                category: 'Event Production',
+                thumbnail: '',
+                files: [
+                    {
+                        name: 'Event Photos & Videos',
+                        path: 'https://drive.google.com/drive/folders/YOUR_LINK_HERE',
+                        type: 'gdrive'
+                    }
+                ]
+            },
+            {
+                id: 'pr-activity',
+                title: 'PR Activity',
+                category: 'Public Relations',
+                thumbnail: '',
+                files: [
+                    {
+                        name: 'PR Press Coverage',
+                        path: 'https://drive.google.com/drive/folders/YOUR_LINK_HERE',
+                        type: 'gdrive'
+                    }
+                ]
+            }
+        ];
 
         const socialMediaProject = {
             id: 'social-media',
