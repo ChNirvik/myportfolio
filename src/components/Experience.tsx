@@ -4,20 +4,19 @@ import { motion } from 'framer-motion';
 
 const experiences = [
     {
-        title: 'Head of Marketing',
-        company: 'TicketsQue / EngageQue',
-        period: '08/2025 – 11/2025',
-        location: 'Bangalore',
+        title: 'Marketing Consultant',
+        company: 'eCorp Services',
+        period: '01/2026 – Present',
+        location: 'Remote',
         bullets: [
-            'Owned growth strategy and performance-led GTM for event-ticketing and cover-charge products across Tier-1 cities.',
-            'Executed hyperlocal campaigns to drive first-time users and repeat transactions, optimizing acquisition funnels across paid and owned channels.',
-            'Designed partner growth playbooks to increase recurring revenue from venue brands through campaign optimization and bundled growth offerings.',
-            'Conducted user behavior and VoC analysis to refine messaging, creatives, and conversion journeys.',
-            'Worked closely with revenue and operations teams to align growth initiatives with business outcomes.',
+            'Designed and launched an AI-powered lead generation pipeline using Apify and Smartlead, targeting real estate professionals nationally—automating prospecting workflows and reducing manual effort by 80%+.',
+            'Architected a productized subscription go-to-market strategy for a 5-tier SaaS model with pricing anchored to competitive benchmarks and a beta lock-in mechanic.',
+            'Led an SEO content sprint delivering 11 new marketing pages, improving Google Search Console coverage and accelerating organic discoverability.',
+            'Designed automated outreach sequences and CRM workflows using n8n and Zapier to improve pipeline velocity and reduce cost-per-qualified-lead.',
         ],
     },
     {
-        title: 'Growth Marketing Manager',
+        title: 'Marketing Manager',
         company: 'eCorp Services',
         period: '04/2024 – 07/2025',
         location: 'Remote',
@@ -63,14 +62,16 @@ const skills = [
     'Experimentation (A/B Testing, Geo-based Tests)',
     'Growth Funnels & Retention Loops',
     'Attribution & Analytics (GA4, CRM Insights)',
+    'AI-Powered Growth Systems & Automation',
     'Partner / Client Growth & Upsell Strategy',
     'Agency & Channel Partnerships',
     'Campaign Audits & Media Optimization',
+    'Automation Solutions & AI Integrations',
     'Cross-functional Collaboration (Product, Revenue, Ops)',
 ];
 
 const tools = [
-    'Meta Ads Manager', 'Google Ads', 'HubSpot', 'GA4', 'n8n', 'Zapier', 'Make.com', 'Webflow',
+    'Meta Ads Manager', 'Google Ads', 'HubSpot', 'GA4', 'Mixpanel', 'n8n', 'Zapier', 'Make.com', 'Apify', 'Smartlead', 'Webflow',
 ];
 
 const achievements = [
@@ -78,6 +79,9 @@ const achievements = [
     'Influenced ₹30–40 Cr in partner revenue outcomes via paid acquisition, retargeting, and lifecycle optimization.',
     'Delivered ~4x ROAS across Meta and Google Ads portfolios.',
     'Built scalable hyperlocal growth playbooks across multiple Indian metros.',
+    'Launched an AI-powered outreach and lead pipeline system, reducing manual prospecting effort by 80%+.',
+    'Led 15-member marketing & activation org; managed agencies, vendors, and creator pods.',
+    'Partnered cross-functionally with Sales, Product, BizDev, and Founders to align growth initiatives with business outcomes.',
 ];
 
 const containerVariants = {

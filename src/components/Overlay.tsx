@@ -37,7 +37,7 @@ export default function Overlay() {
                         Nirvik Chakraborty
                     </h1>
                     <p className="text-xl md:text-2xl text-gray-300 font-light tracking-wide">
-                        Marketing Generalist
+                        Growth Marketer & AI Systems Builder
                     </p>
                 </motion.div>
             )}
