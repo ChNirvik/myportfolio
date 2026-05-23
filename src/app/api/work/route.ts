@@ -7,6 +7,23 @@ export async function GET() {
         // Standard predefined categories instead of reading from disk
         const folders = [
             {
+                id: 'ecorp',
+                title: 'eCorp Services',
+                category: 'SaaS / Real Estate Automation',
+                thumbnail: '/images/ecorp/05-pipeline.png',
+                description: 'Lead generation & automation platform for real estate: scrape leads from Google Maps, score by business activity & digital need, enrich with contact info, and automate outreach via email.',
+                website: 'https://www.ecorpservices.com',
+                files: [
+                    { name: 'Admin Dashboard', path: '/images/ecorp/01-admin-overview.png', type: 'image' },
+                    { name: 'Lead Pipeline (150 scraped, 27 HOT)', path: '/images/ecorp/05-pipeline.png', type: 'image' },
+                    { name: 'Lead Scraping Config', path: '/images/ecorp/03-scrape-config.png', type: 'image' },
+                    { name: 'Email Campaign Automation', path: '/images/ecorp/02-email-campaigns.png', type: 'image' },
+                    { name: 'Voice Agent Integration', path: '/images/ecorp/06-voice-agent.png', type: 'image' },
+                    { name: 'Client Portal Dashboard', path: '/images/ecorp/07-client-portal.png', type: 'image' },
+                    { name: 'Billing & Invoicing', path: '/images/ecorp/04-billing.png', type: 'image' }
+                ]
+            },
+            {
                 id: 'brand-ads',
                 title: 'Brand Ads',
                 category: 'Advertising',
