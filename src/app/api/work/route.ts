@@ -20,7 +20,7 @@ export async function GET() {
                     { name: 'Email Campaign Automation', path: '/images/ecorp/02-email-campaigns.png', type: 'image' },
                     { name: 'Voice Agent Integration', path: '/images/ecorp/06-voice-agent.png', type: 'image' },
                     { name: 'Client Portal Dashboard', path: '/images/ecorp/07-client-portal.png', type: 'image' },
-                    { name: 'Billing & Invoicing', path: '/images/ecorp/04-billing.png', type: 'image' }
+                    { name: 'AI Voice Agent', path: '/images/ecorp/04-billing.png', type: 'image' }
                 ]
             },
             {
